@@ -1,4 +1,4 @@
-alter table student add grade int not null;
+alter table student add grade int;
 delete from student where grade >= 4;
 delete from student where id in (select student_id from mark having (select count(*) from mark group by student_id where mark < 4) >= 1);
 delete from paymenttype where name = 'DAILY';
