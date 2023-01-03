@@ -1,3 +1,3 @@
 select * from student where id in (select student_id from mark group by student_id having avg(mark) > 8;
 select id, name from student where id in (select student_id from mark group by student_id having min(mark) > 7);
-select id, name from student where id in (select student_id from payment group by student_id having count(select amount from payment where (cast(payment_date as date) >= '2019-01-01' and cast(payment_date as date) <= '2019-12-31')) > 2);
+select id, name from student where id in (select student_id from payment group by student_id having count(select amount from payment where cast(payment_date as date) >= '2019-01-01' and cast(payment_date as date) <= '2019-12-31') > 2);

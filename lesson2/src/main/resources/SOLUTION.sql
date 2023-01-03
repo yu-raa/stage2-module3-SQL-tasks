@@ -1,4 +1,4 @@
-alter table student add grade int not null;
+alter table student add grade int;
 insert into student (name, birthday, groupnumber, grade) values ('John', '2001-2-12', 5378, 1);
 insert into student (name, birthday, groupnumber, grade) values ('Chris', '2001-7-12', 5378, 1);
 insert into student (name, birthday, groupnumber, grade) values ('Carl', '2001-6-22', 5373, 1);
